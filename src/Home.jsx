@@ -56,9 +56,11 @@ const Home = () => {
             images.map((item,index)=>{
                 return(
                     <div className='images_container' key={index}>
+                        <a href={item.links.download} target='_blank'>
                         <img className='imagess' src={item.urls.regular} />
                         <p className='textss'>{item.alt_description}</p>
                         <p className='updated'>{item.user.updated_at}</p>
+                        </a>
                     </div>
                 )
             })
